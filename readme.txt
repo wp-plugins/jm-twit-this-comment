@@ -9,6 +9,7 @@ Stable tag: trunk
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 No big deal. It's just that sometimes you read amazing comments that are even worthier than the entire post so tweet it ^^. 
+
 == Description ==
 
 Once activated the plugin adds another link beside your reply link for each comment and a field in comment form for your commentators if they want to display their Twitter account.
@@ -44,6 +45,7 @@ En Français
 Not yet.
 
 == Screenshots ==
+
 1. edit screen
 2. front end (2 links -> commentators twitter profile and tweet link for comment)
 3. example of tweet
