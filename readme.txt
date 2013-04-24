@@ -1,4 +1,4 @@
-=== JM Twit this Comment ===
+=== JM Twit This Comment ===
 Contributors: jmlapam
 Tags: twitter, comments, reply, comment form
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=jmlapam%40gmail%2ecom&item_name=JM%20Twit%20This%20Comment&no_shipping=0&no_note=1&tax=0&currency_code=EUR&bn=PP%2dDonationsBF&charset=UTF%2d8
@@ -38,7 +38,7 @@ En Français
 
 1. Chargez les fichiers de l'archive dans le dossier /wp-content/plugins/ 
 2. Activez le plugin dans le menu extensions de WordPress
-3. Vous pouvez modérer le champ compte Twitter que le vos commentateurs remplissent grâce à l'édit des commentaires
+3. Vous pouvez modérer le champ compte Twitter que vos commentateurs remplissent grâce à l'édit des commentaires
 
 == Frequently asked questions ==
 
