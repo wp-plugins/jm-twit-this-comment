@@ -44,14 +44,13 @@ En Français
 Not yet.
 
 == Screenshots ==
-
 1. edit screen
 2. front end (2 links -> commentators twitter profile and tweet link for comment)
 3. example of tweet
 
 == Changelog ==
 
-*= 1.2.0 =
+= 1.2.0 =
 * 24 Apr 2013
 * Bugfix tinyurl
 
