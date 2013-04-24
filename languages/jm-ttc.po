@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in function
+#: jm-twit-this-comment.php
+msgid "On Twitter"
+msgstr ""
+
+#. Text in function
+#: jm-twit-this-comment.php
+msgid "Twitter account (optional and without @)"
+msgstr ""
+
+#. Text in function
+#: jm-twit-this-comment.php
+msgid "by "
+msgstr ""
+
+#. Text in function
+#: jm-twit-this-comment.php
+msgid "Tweet this comment"
+msgstr ""
