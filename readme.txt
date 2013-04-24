@@ -46,9 +46,9 @@ Not yet.
 
 == Screenshots ==
 
-1. edit screen
-2. front end (2 links -> commentators twitter profile and tweet link for comment)
-3. example of tweet
+1. edit screen.
+2. front end (2 links - commentators twitter profile and tweet link for comment).
+3. example of tweet.
 
 == Changelog ==
 
