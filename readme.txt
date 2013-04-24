@@ -52,6 +52,10 @@ Not Yet.
 
 == Changelog ==
 
+= 1.3.0 =
+* 25 Apr 2013
+* minor correction </p> line 83
+
 = 1.2.0 =
 * 24 Apr 2013
 * Bugfix tinyurl

@@ -5,7 +5,7 @@ Plugin URI: http://tweetpress.fr/
 Description:  Sometimes you read amazing comments that are even worthier than entire post so tweet it ^^
 Author: JUlien Maury
 Author URI: http://tweetpress.fr
-Version: 1.2.0
+Version: 1.3.0
 License: GPL2++
 
 Copyright 2013 Julien Maury
@@ -80,7 +80,7 @@ add_comment_meta( $comment_id, 'twitAccount', $twitAccount );
 add_filter( 'comment_text', 'jm_ttc_show_twit_account');
 function jm_ttc_show_twit_account( $text ){
 if( $commenttwitter = get_comment_meta( get_comment_ID(), 'twitAccount', true ) ) {
-$commenttwitter = '<p class="twitAccount"><a href="http://twitter.com/intent/user?screen_name=' . esc_attr( $commenttwitter ) . '">'.__('On Twitter','jm-ttc').'</a><p>';
+$commenttwitter = '<p class="twitAccount"><a href="http://twitter.com/intent/user?screen_name=' . esc_attr( $commenttwitter ) . '">'.__('On Twitter','jm-ttc').'</a></p>';
 $text = $text .  $commenttwitter ;
 return $text;
 } else {
