@@ -42,12 +42,13 @@ En Français
 
 == Frequently asked questions ==
 
+Not Yet.
 
 == Screenshots ==
 
-1. edit screen.
-2. front end (2 links - commentators twitter profile and tweet link for comment).
-3. example of tweet.
+1. edit screen
+2. front end links
+3. demo of tweet
 
 == Changelog ==
 

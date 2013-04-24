@@ -64,7 +64,7 @@ add_action( 'comment_form_after_fields', 'jm_ttc_add_field' );
 function jm_ttc_add_field () {
 echo '<p class="comment-form-twitter">'.
 '<label for="twitAccount">' . __( 'Twitter account (optional and without @)','jm-ttc' ) . '</label>'.
-'<input id="twitAccount" name="twitAccount" type="text" size="30"  tabindex="5" /></p>';
+'<input id="twitAccount" name="twitAccount" type="text" size="30" /></p>';
 }
 
 // SAVE OUR COMMENT DATA
