@@ -5,7 +5,7 @@ Plugin URI: http://tweetpress.fr/
 Description:  Sometimes you read amazing comments that are even worthier than entire post so tweet it ^^
 Author: JUlien Maury
 Author URI: http://tweetpress.fr
-Version: 1.0.0
+Version: 1.1.0
 License: GPL2++
 
 Copyright 2013 Julien Maury
