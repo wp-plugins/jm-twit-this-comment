@@ -42,7 +42,6 @@ En Français
 
 == Frequently asked questions ==
 
-Not yet.
 
 == Screenshots ==
 
