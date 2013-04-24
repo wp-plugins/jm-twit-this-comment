@@ -51,9 +51,13 @@ Not yet.
 
 == Changelog ==
 
+*= 1.2.0 =
+* 24 Apr 2013
+* Bugfix tinyurl
+
 = 1.1.0 =
 * 24 Apr 2013
-* Correction for uninstall. Thanks juliobox for reporting it. Now the plugon uses $wpdb instead of delete_comment_meta which allow us to avoid 1 request per comment. Actually we want only 1 request for all.
+* Correction for uninstall. Thanks juliobox for reporting it. Now the plugin uses $wpdb instead of delete_comment_meta which allow us to avoid 1 request per comment. Actually we want only 1 request for all.
 
 = 1.0.0 =
 * 24 Apr 2013

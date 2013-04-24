@@ -5,7 +5,7 @@ Plugin URI: http://tweetpress.fr/
 Description:  Sometimes you read amazing comments that are even worthier than entire post so tweet it ^^
 Author: JUlien Maury
 Author URI: http://tweetpress.fr
-Version: 1.1.0
+Version: 1.2.0
 License: GPL2++
 
 Copyright 2013 Julien Maury
@@ -27,8 +27,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // TINYURL
 function jm_ttc_getTinyUrl($url) { 
-$tinyurl = file_get_contents("http://tinyurl.com/api-create.php?url=".$url); 
-return $tinyurl; 
+ $tiny = 'http://tinyurl.com/api-create.php?url=';
+    $tinyhandle = fopen($tiny.urlencode(trim($url)), "r");
+    $tinyurl = fread($tinyhandle, 26);
+    fclose($tinyhandle);
+    return $tinyurl;
 }
 
 // GRABS DATA FROM COMMENT
@@ -40,7 +43,7 @@ $jm_ttc_data = get_comment($jm_ttc_id , ARRAY_A);
 $jm_tc_ttc = get_comment_text(stripslashes(trim($jm_ttc_id)));
 $jm_ttc_author = get_comment_author();
 
-$jm_ttc_tinyUrl = jm_ttc_getTinyUrl($jm_ttc_link);
+$jm_ttc_tinyUrl =  jm_ttc_getTinyUrl($jm_ttc_link);
 
 if(strlen($jm_tc_ttc)<116){
 $jm_tc_ttc = '"'.$jm_tc_ttc . '" ' . $jm_ttc_tinyUrl;
@@ -121,9 +124,9 @@ endif;
 // ADD OUR TWIT LINK BESIDE REPLY LINK
 function jm_ttc_insert_link($content) {
 if( $commenttwitter = get_comment_meta( get_comment_ID(), 'twitAccount', true ) ) {
-$content = $content . '<a href="http://twitter.com/intent/tweet?text=' . urlencode( jm_twit_this_comment() ) . '&amp;via='. $commenttwitter .'" class="jm_ttc comment-reply-link">'. __('Tweet this comment','jm-ttc'). '&rarr;</a>';	
+$content = $content . '| <a href="http://twitter.com/intent/tweet?text=' . urlencode( jm_twit_this_comment() ) . '&amp;via='. $commenttwitter .'" class="jm_ttc comment-reply-link">'. __('Tweet this comment','jm-ttc'). '&rarr;</a>';	
 } else {
-$content = $content . '<a href="http://twitter.com/intent/tweet?text=' . urlencode( jm_twit_this_comment() ) . '" class="jm_ttc comment-reply-link">'. __('Tweet this comment','jm-ttc'). '&rarr;</a>';
+$content = $content . '| <a href="http://twitter.com/intent/tweet?text=' . urlencode( jm_twit_this_comment() ) . '" class="jm_ttc comment-reply-link">'. __('Tweet this comment','jm-ttc'). '&rarr;</a>';
 }
 return $content;
 }
