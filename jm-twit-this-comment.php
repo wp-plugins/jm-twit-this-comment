@@ -5,7 +5,7 @@ Plugin URI: http://tweetpress.fr/
 Description:  Sometimes you read amazing comments that are even worthier than entire post so tweet it ^^
 Author: JUlien Maury
 Author URI: http://tweetpress.fr
-Version: 1.3.0
+Version: 1.4.0
 License: GPL2++
 
 Copyright 2013 Julien Maury
@@ -36,24 +36,18 @@ function jm_ttc_getTinyUrl($url) {
 
 // GRABS DATA FROM COMMENT
 function jm_twit_this_comment(){
-$jm_tc_ttc = "";
+$jm_tc_ttc = '';
 $jm_ttc_id = get_comment_ID();
 $jm_ttc_link = get_comment_link();
 $jm_ttc_data = get_comment($jm_ttc_id , ARRAY_A);
 $jm_tc_ttc = get_comment_text(stripslashes(trim($jm_ttc_id)));
-$jm_ttc_author = get_comment_author();
-
+$jm_ttc_author = __('by ','jm-ttc') . get_comment_author();
 $jm_ttc_tinyUrl =  jm_ttc_getTinyUrl($jm_ttc_link);
 
-if(strlen($jm_tc_ttc)<116){
-$jm_tc_ttc = '"'.$jm_tc_ttc . '" ' . $jm_ttc_tinyUrl;
-} elseif('' === get_comment_meta( get_comment_ID(), 'twitAccount', true)) {
-$jm_ttc_author = __('by ','jm-ttc') . $jm_ttc_author;
-$totalChar = 113 - strlen($jm_ttc_author) - strlen($jm_tc_ttc) - strlen($jm_ttc_tinyUrl);
-$jm_tc_ttc = '"'. substr($jm_tc_ttc,0,$totalChar).'..." '. $jm_ttc_author .' '. $jm_ttc_tinyUrl;
-} else {
-$jm_tc_ttc = '"'. substr($jm_tc_ttc,0,111) . '... "' . $jm_ttc_tinyUrl;
-}
+/* making things simplier was the solution */
+$totalChar = 118 - strlen($jm_ttc_author) - strlen($jm_ttc_tinyUrl); //118 is the new limit for tweets with URL
+$jm_tc_ttc = '"'. substr($jm_tc_ttc,0,$totalChar) . '..."' .' '. $jm_ttc_author .' '. $jm_ttc_tinyUrl;
+
 
 return $jm_tc_ttc;
 }

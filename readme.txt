@@ -52,6 +52,10 @@ Not Yet.
 
 == Changelog ==
 
+= 1.3.1 =
+* 26 Apr 2013
+* fix wrong count for comment excerpt
+
 = 1.3.0 =
 * 25 Apr 2013
 * minor correction </p> line 83
