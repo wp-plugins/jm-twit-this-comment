@@ -8,7 +8,7 @@ License: GPLv2 or later
 Stable tag: trunk
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-No big deal. It's just that sometimes you read amazing comments that are even worthier than the entire post so tweet it ^^. 
+No big deal. It's just that sometimes you read amazing comments so tweet it ^^. 
 
 == Description ==
 
