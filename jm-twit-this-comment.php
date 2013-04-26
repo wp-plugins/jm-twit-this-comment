@@ -69,7 +69,6 @@ $twitAccount = wp_filter_nohtml_kses($_POST['twitAccount']);
 add_comment_meta( $comment_id, 'twitAccount', $twitAccount );
 }
 
-
 // ADD TWIT ACCOUNT TO COMMENT
 add_filter( 'comment_text', 'jm_ttc_show_twit_account');
 function jm_ttc_show_twit_account( $text ){
