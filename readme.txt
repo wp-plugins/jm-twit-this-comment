@@ -16,7 +16,6 @@ Once activated the plugin adds another link beside your reply link for each comm
 
 <a href="http://twitter.com/tweetpressfr">Follow me on Twitter</a> - <a href="http://tweetpress.fr/en/plugin/jm-twit-this-comment">my blog</a>
 
-
 ––––
 En Français 
 –––––––––––––––––––––––––––––––––––
