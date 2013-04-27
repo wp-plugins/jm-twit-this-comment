@@ -30,3 +30,18 @@ msgstr "de "
 msgid "Tweet this comment"
 msgstr "Tweeter ce commentaire"
 
+#. Text in echo
+#: jm-twitter-cards.php
+msgid "Please enter your Twitter Account (without @)"
+msgstr "SVP entrez votre pseudo Twitter (sans @)"
+
+#. Text in echo
+#: jm-twitter-cards.php
+msgid "Twitter Account"
+msgstr "Compte Twitter"
+
+#. Text in echo
+#: jm-twitter-cards.php
+msgid "Wait ! Do not leave spaces in your Twitter account please."
+msgstr "Attention ! Ne laissez aucun espace dans le champ compte Twitter SVP"
+

@@ -22,3 +22,18 @@ msgstr ""
 #: jm-twit-this-comment.php
 msgid "Tweet this comment"
 msgstr ""
+
+#. Text in echo
+#: jm-twitter-cards.php
+msgid "Please enter your Twitter Account (without @)"
+msgstr ""
+
+#. Text in echo
+#: jm-twitter-cards.php
+msgid "Twitter Account"
+msgstr ""
+
+#. Text in echo
+#: jm-twitter-cards.php
+msgid "Wait ! Do not leave spaces in your Twitter account please."
+msgstr ""

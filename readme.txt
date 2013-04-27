@@ -51,6 +51,10 @@ Not Yet.
 
 == Changelog ==
 
+= 1.3.3 =
+* 27 Apr 2013
+* add support in profiles for registered users
+
 = 1.3.2 =
 * 27 Apr 2013
 * add rel noffolow to Twitter links in comment
