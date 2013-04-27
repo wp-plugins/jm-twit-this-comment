@@ -51,6 +51,11 @@ Not Yet.
 
 == Changelog ==
 
+= 1.3.2 =
+* 27 Apr 2013
+* add rel noffolow to Twitter links in comment
+* remove unecessary spaces (POSIX) in comment excerpt 
+
 = 1.3.1 =
 * 26 Apr 2013
 * fix wrong count for comment excerpt

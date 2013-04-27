@@ -5,7 +5,7 @@ Plugin URI: http://tweetpress.fr/
 Description:  Sometimes you read amazing comments that are even worthier than entire post so tweet it ^^
 Author: JUlien Maury
 Author URI: http://tweetpress.fr
-Version: 1.3.1
+Version: 1.3.2
 License: GPL2++
 
 Copyright 2013 Julien Maury
@@ -40,7 +40,10 @@ $jm_tc_ttc = '';
 $jm_ttc_id = get_comment_ID();
 $jm_ttc_link = get_comment_link();
 $jm_ttc_data = get_comment($jm_ttc_id , ARRAY_A);
+
 $jm_tc_ttc = get_comment_text(stripslashes(trim($jm_ttc_id)));
+$jm_tc_ttc = preg_replace('/[\p{Z}\s]{2,}/u', ' ', $jm_tc_ttc );//remove unecessary spaces cf http://tweetpress.fr/codewp/enlever-espaces-doubles-wordpress/
+
 $jm_ttc_author = __('by ','jm-ttc') . get_comment_author();
 $jm_ttc_tinyUrl =  jm_ttc_getTinyUrl($jm_ttc_link);
 
@@ -73,7 +76,7 @@ add_comment_meta( $comment_id, 'twitAccount', $twitAccount );
 add_filter( 'comment_text', 'jm_ttc_show_twit_account');
 function jm_ttc_show_twit_account( $text ){
 if( $commenttwitter = get_comment_meta( get_comment_ID(), 'twitAccount', true ) ) {
-$commenttwitter = '<p class="twitAccount"><a href="http://twitter.com/intent/user?screen_name=' . esc_attr( $commenttwitter ) . '">'.__('On Twitter','jm-ttc').'</a></p>';
+$commenttwitter = '<p class="twitAccount"><a rel="nofollow"  href="http://twitter.com/intent/user?screen_name=' . esc_attr( $commenttwitter ) . '">'.__('On Twitter','jm-ttc').'</a></p>';
 $text = $text .  $commenttwitter ;
 return $text;
 } else {
@@ -117,9 +120,9 @@ endif;
 // ADD OUR TWIT LINK BESIDE REPLY LINK
 function jm_ttc_insert_link($content) {
 if( $commenttwitter = get_comment_meta( get_comment_ID(), 'twitAccount', true ) ) {
-$content = $content . '| <a href="http://twitter.com/intent/tweet?text=' . urlencode( jm_twit_this_comment() ) . '&amp;via='. $commenttwitter .'" class="jm_ttc comment-reply-link">'. __('Tweet this comment','jm-ttc'). '&rarr;</a>';	
+$content = $content . '| <a rel="nofollow" href="http://twitter.com/intent/tweet?text=' . urlencode( jm_twit_this_comment() ) . '&amp;via='. $commenttwitter .'" class="jm_ttc comment-reply-link">'. __('Tweet this comment','jm-ttc'). '&rarr;</a>';	
 } else {
-$content = $content . '| <a href="http://twitter.com/intent/tweet?text=' . urlencode( jm_twit_this_comment() ) . '" class="jm_ttc comment-reply-link">'. __('Tweet this comment','jm-ttc'). '&rarr;</a>';
+$content = $content . '| <a rel="nofollow" href="http://twitter.com/intent/tweet?text=' . urlencode( jm_twit_this_comment() ) . '" class="jm_ttc comment-reply-link">'. __('Tweet this comment','jm-ttc'). '&rarr;</a>';
 }
 return $content;
 }
