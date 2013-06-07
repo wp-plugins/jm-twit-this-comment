@@ -5,7 +5,7 @@ Plugin URI: http://tweetpress.fr/
 Description:  Sometimes you read amazing comments that are even worthier than entire post so tweet it ^^
 Author: JUlien Maury
 Author URI: http://tweetpress.fr
-Version: 1.3.3
+Version: 1.3.4
 License: GPL2++
 
 Copyright 2013 Julien Maury
@@ -25,15 +25,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 
-// TINYURL
-function jm_ttc_getTinyUrl($url) { 
-$tiny = 'http://tinyurl.com/api-create.php?url=';
-$tinyhandle = fopen($tiny.urlencode(trim($url)), "r");
-$tinyurl = fread($tinyhandle, 26);
-fclose($tinyhandle);
-return $tinyurl;
-}
-
 // Remove any @ from input value
 function jm_ttc_remove_at($at) { 
 $noat = str_replace('@','',$at);
@@ -50,13 +41,11 @@ $jm_ttc_data = get_comment($jm_ttc_id , ARRAY_A);
 
 $jm_tc_ttc = get_comment_text(stripslashes(trim($jm_ttc_id)));
 $jm_tc_ttc = preg_replace('/[\p{Z}\s]{2,}/u', ' ', $jm_tc_ttc );//remove all spaces cf http://tweetpress.fr/codewp/enlever-espaces-doubles-wordpress/
-
 $jm_ttc_author = __('by ','jm-ttc') . get_comment_author();
-$jm_ttc_tinyUrl =  jm_ttc_getTinyUrl($jm_ttc_link);
 
 /* making things simplier was the solution */
-$totalChar = 118 - strlen($jm_ttc_author) - strlen($jm_ttc_tinyUrl); //118 is the new limit for tweets with URL
-$jm_tc_ttc = '"'. substr($jm_tc_ttc,0,$totalChar) . '..."' .' '. $jm_ttc_author .' '. $jm_ttc_tinyUrl;
+$totalChar = 117 - strlen($jm_ttc_author) - strlen($jm_ttc_link); //118 is the new limit for tweets with URL
+$jm_tc_ttc = '"'. substr($jm_tc_ttc,0,$totalChar) . '..."' .' '. $jm_ttc_author .' '. $jm_ttc_link;
 
 
 return $jm_tc_ttc;

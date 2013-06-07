@@ -51,6 +51,11 @@ Not Yet.
 
 == Changelog ==
 
+= 1.3.4 =
+* 7 jun 2013
+* removed tinyurl function and replace it with comment permalink according to some user's feedback
+* update with new limit for tweets with URL >> 117 characters
+
 = 1.3.3 =
 * 27 Apr 2013
 * add support in profiles for registered users
