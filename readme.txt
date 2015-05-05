@@ -51,6 +51,10 @@ Not Yet.
 
 == Changelog ==
 
+= 2.0 =
+* 05 May 2015
+* code was too old, refactoring
+
 = 1.3.4 =
 * 7 jun 2013
 * removed tinyurl function and replace it with comment permalink according to some user's feedback
